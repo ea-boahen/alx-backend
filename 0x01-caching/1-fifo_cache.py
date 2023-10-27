@@ -39,7 +39,7 @@ class FIFOCache(BaseCaching):
         """
         super().__init__()
 
-    def put(self, key = None, item = None):
+    def put(self, key=None, item=None):
         """
             modify cache data
 
