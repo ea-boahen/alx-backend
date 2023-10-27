@@ -39,7 +39,7 @@ class LIFOCache(BaseCaching):
         """
         super().__init__()
 
-    def put(self, key, item):
+    def put(self, key=None, item=None):
         """
             modify cache data
 
