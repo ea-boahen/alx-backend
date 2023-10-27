@@ -43,7 +43,7 @@ class LRUCache(BaseCaching):
         super().__init__()
         self.leastrecent = []
 
-    def put(self, key, item):
+    def put(self, key=None, item=None):
         """
             modify cache data
 
@@ -51,7 +51,7 @@ class LRUCache(BaseCaching):
                 key: of the dict
                 item: value of the key
         """
-        if key or item is not None:
+        if key and item is not None:
             valuecache = self.get(key)
             # Make a new
             if valuecache is None:
