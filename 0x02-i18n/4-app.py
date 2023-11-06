@@ -11,6 +11,11 @@ from flask_babel import Babel, _
 class Config(object):
     """Configuration Babel
     set default values for languages Timezone and locale
+            detect if the incoming request contains locale
+            argument and ifs value is a supported locale,
+            return it. If not or if the parameter is not
+            present, resort to the previous default behavior.
+            Best match to the language
     """
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_TIMEZONE = 'UTC'
@@ -27,9 +32,9 @@ def get_locale():
     """ Locale language
 
         Return:
-            detect if the incoming request contains locale 
-            argument and ifs value is a supported locale, 
-            return it. If not or if the parameter is not 
+            detect if the incoming request contains locale
+            argument and ifs value is a supported locale,
+            return it. If not or if the parameter is not
             present, resort to the previous default behavior.
             Best match to the language
     """
@@ -47,6 +52,11 @@ def hello_world():
 
         Return:
             Initial template html
+            detect if the incoming request contains locale
+            argument and ifs value is a supported locale,
+            return it. If not or if the parameter is not
+            present, resort to the previous default behavior.
+            Best match to the language
     """
     return render_template('4-index.html')
 
