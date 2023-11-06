@@ -27,6 +27,10 @@ def get_locale():
     """ Locale language
 
         Return:
+            detect if the incoming request contains locale 
+            argument and ifs value is a supported locale, 
+            return it. If not or if the parameter is not 
+            present, resort to the previous default behavior.
             Best match to the language
     """
     locale = request.args.get('locale', None)
