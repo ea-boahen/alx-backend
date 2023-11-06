@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
-""" Basic Babel setup """
+"""Basic Babel setup
+In this task, you will implement a way to
+force a particular locale by passing the locale=fr
+parameter to your app’s URLs.
+"""
 from flask import Flask, render_template, request
 from flask_babel import Babel, _
 
 
 class Config(object):
-    """ Configuration Babel 
-        set default values for languages Timezone and locale
+    """Configuration Babel
+    set default values for languages Timezone and locale
     """
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_TIMEZONE = 'UTC'
