@@ -14,7 +14,9 @@ users = {
 
 
 class Config(object):
-    """ Configuration Babel """
+    """ Configuration Babel 
+        set default values for lang time and locale
+    """
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_TIMEZONE = 'UTC'
     BABEL_DEFAULT_LOCALE = 'en'

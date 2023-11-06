@@ -14,7 +14,12 @@ users = {
 
 
 class Config(object):
-    """ Configuration Babel """
+    """ Configuration Babel 
+
+    Creating a user login system is outside the scope 
+    of this project. To emulate a similar behavior, copy 
+    the following user table 
+    """
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_TIMEZONE = 'UTC'
     BABEL_DEFAULT_LOCALE = 'en'
@@ -28,6 +33,7 @@ babel = Babel(app)
 @app.before_request
 def before_request(login_as: int = None):
     """ Request of each function
+        return null sets user to user
     """
     user: dict = get_user()
     print(user)
